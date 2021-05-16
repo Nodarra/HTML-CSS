@@ -1,8 +1,18 @@
+:root {
+  --shadow-color: #FF9E9E;
+  --shadow-color-light: white;
+  --primary: red;
+}
+
 * {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
 }
 
 .loader__container {
@@ -65,6 +75,7 @@
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
+  scroll-snap-align: start;
 }
 
 .header__text {
@@ -81,8 +92,7 @@
 
 .header__text h1 {
   font-size: 3.5rem;
-  color: red;
-  text-shadow: 2px 2px 3px #000;
+  padding: 10px 0 10px 0;
 }
 
 .header__text .social__media {
@@ -132,6 +142,143 @@
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.about__page {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.about__page .ilustration__about {
+  opacity: 0.6;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  z-index: -1;
+}
+
+.about__page .ilustration__about img {
+  width: 80%;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 30%;
+  left: 20%;
+}
+
+.about__page .about {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.about__page .about h1 {
+  font-size: 2.5rem;
+  padding-bottom: 20px;
+  color: var(--primary);
+}
+
+.about__page .about p {
+  width: 30rem;
+  text-align: justify;
+}
+
+.education__page {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.education__page .uni__list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.education__page .uni__list h1 {
+  color: var(--primary);
+  text-align: center;
+  padding: 50px 0 10px 0;
+}
+
+.education__page .uni__list .uni {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px 0 20px 0;
+  padding: 20px 0 20px 0;
+  -webkit-box-shadow: 0px 1px 10px rgba(255, 0, 0, 0.5);
+          box-shadow: 0px 1px 10px rgba(255, 0, 0, 0.5);
+  -webkit-transition: -webkit-transform .3s ease-out;
+  transition: -webkit-transform .3s ease-out;
+  transition: transform .3s ease-out;
+  transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+}
+
+.education__page .uni__list .uni:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.education__page .uni__list .uni .uni__des {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 15px 40px 15px 100px;
+}
+
+.education__page .uni__list .uni .uni__des h2 {
+  padding-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.education__page .uni__list .uni .uni__des p {
+  text-align: justify;
+}
+
+.education__page .uni__list .uni .uni__photo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.education__page .ilustration__edu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.education__page .ilustration__edu img {
+  position: relative;
+  top: 20%;
+  left: 10%;
+}
+
+.skill__page {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
 }
 
 @-webkit-keyframes rotate-one {
